@@ -2,29 +2,32 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  position: absolute;
-  top: 10px;
-  left: 50px;
+  display: flex;
   width: 40px;
   height: 40px;
+  align-items: center;
+  justify-content:  center;
+  margin-left: 50px;
 }
 
 ul {
   display: flex;
-  position: absolute;
-  right: 50px;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-right: 50px;
+
 }
 
 li {
@@ -43,11 +46,6 @@ a {
   color: inherit;
 }
 
-a.is-active::after {
-  position: absolute;
-
-}
-
 a:hover,
 a:active,
 a:focus,
@@ -57,28 +55,33 @@ a:visited {
   outline: none;
 }
 
-
-
-.nav-1 {
-  color: #00ACDC
+.nav_1 {
+  color: var(--link-blue);
 }
 
-.nav-2 {
+.nav_2 {
   color: black;
 }
 
 a.is-active {
-  color: #00ACDC;
+  color: #00acdc;
 }
 
 a.is-active::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -18.5;
+  bottom: -18.5px;
   height: 4px;
-  background: #00ACDC;
+  background: var(--link-blue);
   border-radius: 8px;
 }
 
+.nav_list:hover {
+  color: var(--link-blue);
+}
+
+:root {
+   --link-blue: #00ACDC;
+}
