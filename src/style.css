@@ -40,7 +40,7 @@ a {
   text-transform: uppercase;
   position: relative;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
   height: 15px;
   color: inherit;
 }
@@ -83,4 +83,8 @@ a.is-active::after {
 
 :root {
   --link-blue: #00acdc;
+}
+
+a:hover {
+  color: #00acdc;
 }
